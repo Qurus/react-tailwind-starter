@@ -1,0 +1,44 @@
+:root {
+  --column-count: 1;
+
+  @media screen and (min-width:  550px) {
+    --column-count: 2;
+  }
+  @media screen and (min-width:  850px) {
+    --column-count: 3;
+  }
+  @media screen and (min-width:  1200px) {
+    --column-count: 4;
+  }
+}
+
+
+.App {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  background: #282C33;
+  padding: 2rem;
+  color: white;
+}
+
+.App-link {
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.767);
+  background: rgb(90, 216, 255);
+  padding: 0.8rem 0.8rem;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  &:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+  
+  
+}
+
+.paragraph {
+  margin-bottom: 2rem;
+}
